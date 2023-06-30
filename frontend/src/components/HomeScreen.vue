@@ -87,7 +87,7 @@ export default {
   },
   methods: {
     reset() {
-      axios.get('http://127.0.0.1:5001/reset').then((response) => {
+      axios.get('http://18.237.248.110:5000/reset').then((response) => {
         console.log('Reset response: ' + response.data);
       });
     },
@@ -110,7 +110,7 @@ export default {
       console.log(formData);
 
       axios
-        .post('http://127.0.0.1:5001/uploadImages', formData, {
+        .post('http://18.237.248.110:5000/uploadImages', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             //   'Access-Control-Allow-Origin': 'http://127.0.0.1:5001',
@@ -159,7 +159,7 @@ export default {
 
       axios
         .post(
-          `http://127.0.0.1:5001/queryImages?k=${this.k === '' ? -1 : this.k}`,
+          `http://18.237.248.110:5000/queryImages?k=${this.k === '' ? -1 : this.k}`,
           formData,
           {
             headers: {
