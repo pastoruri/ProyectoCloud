@@ -15,5 +15,7 @@ RUN pip install -r requirements.txt
 # Copiar el resto de archivos
 COPY . .
 
+EXPOSE 5001
+
 ENTRYPOINT [ "python" ]
 CMD ["app.py" ]
